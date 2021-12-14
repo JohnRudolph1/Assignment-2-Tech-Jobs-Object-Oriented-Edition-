@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace TechJobsOO
 {
-    public class Job
+    public class Job 
     {
         public int Id { get; }
         private static int nextId = 1;
-        
+
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
         public Location EmployerLocation { get; set; }
@@ -23,6 +23,8 @@ namespace TechJobsOO
         }
         public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
         {
+            Id = nextId;
+            nextId++;
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
